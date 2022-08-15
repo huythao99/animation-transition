@@ -137,7 +137,6 @@ const styles = StyleSheet.create({
   cardContainer: {
     width: width / 2,
     alignItems: 'center',
-    overflow: 'hidden',
   },
   cardHidder: {
     aligItems: 'center',
@@ -145,14 +144,14 @@ const styles = StyleSheet.create({
     paddingBottom: 60,
     paddingTop: 20,
     marginBottom: -35,
-    borderBottomLeftRadius: 450,
-    borderBottomRightRadius: 460,
+    borderBottomLeftRadius: 30,
+    borderBottomRightRadius: 30,
     overflow: 'hidden',
     zIndex: 999,
   },
   card: {
-    height: width / 2 - 20,
-    width: width / 2 - 20,
+    height: width / 2 - 25,
+    width: width / 2 - 25,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#007aff',
@@ -166,8 +165,8 @@ const styles = StyleSheet.create({
     ],
   },
   holdBorder: {
-    width: 45,
-    height: 45,
+    width: 50,
+    height: 50,
     borderRadius: 50,
     backgroundColor: 'gray',
     transform: [{scaleX: 4}],
@@ -176,8 +175,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   hold: {
-    width: 40,
-    height: 40,
+    width: 45,
+    height: 45,
     borderRadius: 50,
     backgroundColor: '#000000',
     marginTop: 5,

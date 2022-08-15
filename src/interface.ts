@@ -4,4 +4,8 @@ export type RootParamsList = {
   VanishCardScreen: undefined;
   PanZoomImageScreen: undefined;
   SwipeScreen: undefined;
+  DoubleTapToLikeScreen: undefined;
+  VelocityGestureScreen: undefined;
+  SensorScreen: undefined;
+  SeatMapDiagram: undefined;
 };

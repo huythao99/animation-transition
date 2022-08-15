@@ -22,6 +22,22 @@ export default function HomeScreen({navigation}: Props) {
     navigation.navigate('SwipeScreen');
   };
 
+  const onPressDoubleTapScreen = () => {
+    navigation.navigate('DoubleTapToLikeScreen');
+  };
+
+  const onPressVelocityGestureScreen = () => {
+    navigation.navigate('VelocityGestureScreen');
+  };
+
+  const onPressSensorScreen = () => {
+    navigation.navigate('SensorScreen');
+  };
+
+  const onPressSeatMapScreen = () => {
+    navigation.navigate('SeatMapDiagram');
+  };
+
   return (
     <ScrollView>
       <TouchableOpacity style={styles.button} onPress={onPressHoldCard}>
@@ -35,6 +51,20 @@ export default function HomeScreen({navigation}: Props) {
       </TouchableOpacity>
       <TouchableOpacity style={styles.button} onPress={onPressSwipeSCreen}>
         <Text style={styles.text}>Swipe Screen</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={onPressDoubleTapScreen}>
+        <Text style={styles.text}>Double Tap To Like Screen</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={onPressVelocityGestureScreen}>
+        <Text style={styles.text}>Velocity Gesture Screen</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={onPressSensorScreen}>
+        <Text style={styles.text}>Sensor Screen</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={onPressSeatMapScreen}>
+        <Text style={styles.text}>Seat Map Screen</Text>
       </TouchableOpacity>
     </ScrollView>
   );

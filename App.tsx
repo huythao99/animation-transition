@@ -4,11 +4,15 @@ import * as React from 'react';
 import {Animated} from 'react-native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {RootParamsList} from './src/interface';
+import DoubleTapToLikeScreen from './src/screens/DoubleTapToLikeScreen';
 import HoldCardScreen from './src/screens/HoleCardScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import PanZoomImageScreen from './src/screens/PanZoomImageScreen';
+import SeatMapDiagram from './src/screens/SeatMapDiagram';
+import SensorScreen from './src/screens/SensorScreen';
 import SwipeScreen from './src/screens/SwipeScreen';
 import VanishCardScreen from './src/screens/VanishCardScreen';
+import VelocityGestureScreen from './src/screens/VelocityGestureScreen';
 
 const Stack = createStackNavigator<RootParamsList>();
 
@@ -260,6 +264,226 @@ export default function App() {
                           : current.progress.interpolate({
                               inputRange: [0, 1],
                               outputRange: ['180deg', '0deg'],
+                            }),
+                      },
+                    ],
+                    opacity: next
+                      ? next.progress.interpolate({
+                          inputRange: [0, 0.5, 1],
+                          outputRange: [1, 1, 0],
+                        })
+                      : current.progress.interpolate({
+                          inputRange: [0, 0.5, 1],
+                          outputRange: [0, 0, 1],
+                        }),
+                  },
+                  overlayStyle: {
+                    opacity: current.progress.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [0, 1],
+                    }),
+                  },
+                };
+              },
+            }}
+          />
+          <Stack.Screen
+            name="DoubleTapToLikeScreen"
+            component={DoubleTapToLikeScreen}
+            options={{
+              headerShown: false,
+              transitionSpec: {
+                open: {
+                  animation: 'timing',
+                  config: {
+                    duration: 500,
+                  },
+                },
+                close: {
+                  animation: 'timing',
+                  config: {
+                    duration: 500,
+                  },
+                },
+              },
+              cardStyleInterpolator: ({current, next}) => {
+                return {
+                  cardStyle: {
+                    transform: [
+                      {
+                        rotateX: next
+                          ? next.progress.interpolate({
+                              inputRange: [0, 0.5, 1],
+                              outputRange: ['0deg', '45deg', '90deg'],
+                            })
+                          : current.progress.interpolate({
+                              inputRange: [0, 0.5, 1],
+                              outputRange: ['90deg', '45deg', '0deg'],
+                            }),
+                      },
+                    ],
+                    opacity: next
+                      ? next.progress.interpolate({
+                          inputRange: [0, 0.5, 1],
+                          outputRange: [1, 1, 0],
+                        })
+                      : current.progress.interpolate({
+                          inputRange: [0, 0.5, 1],
+                          outputRange: [0, 0, 1],
+                        }),
+                  },
+                  overlayStyle: {
+                    opacity: current.progress.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [0, 1],
+                    }),
+                  },
+                };
+              },
+            }}
+          />
+          <Stack.Screen
+            name="VelocityGestureScreen"
+            component={VelocityGestureScreen}
+            options={{
+              headerShown: false,
+              transitionSpec: {
+                open: {
+                  animation: 'timing',
+                  config: {
+                    duration: 500,
+                  },
+                },
+                close: {
+                  animation: 'timing',
+                  config: {
+                    duration: 500,
+                  },
+                },
+              },
+              cardStyleInterpolator: ({current, next}) => {
+                return {
+                  cardStyle: {
+                    transform: [
+                      {
+                        rotateX: next
+                          ? next.progress.interpolate({
+                              inputRange: [0, 0.5, 1],
+                              outputRange: ['0deg', '45deg', '90deg'],
+                            })
+                          : current.progress.interpolate({
+                              inputRange: [0, 0.5, 1],
+                              outputRange: ['90deg', '45deg', '0deg'],
+                            }),
+                      },
+                    ],
+                    opacity: next
+                      ? next.progress.interpolate({
+                          inputRange: [0, 0.5, 1],
+                          outputRange: [1, 1, 0],
+                        })
+                      : current.progress.interpolate({
+                          inputRange: [0, 0.5, 1],
+                          outputRange: [0, 0, 1],
+                        }),
+                  },
+                  overlayStyle: {
+                    opacity: current.progress.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [0, 1],
+                    }),
+                  },
+                };
+              },
+            }}
+          />
+          <Stack.Screen
+            name="SensorScreen"
+            component={SensorScreen}
+            options={{
+              headerShown: false,
+              transitionSpec: {
+                open: {
+                  animation: 'timing',
+                  config: {
+                    duration: 500,
+                  },
+                },
+                close: {
+                  animation: 'timing',
+                  config: {
+                    duration: 500,
+                  },
+                },
+              },
+              cardStyleInterpolator: ({current, next}) => {
+                return {
+                  cardStyle: {
+                    transform: [
+                      {
+                        rotateX: next
+                          ? next.progress.interpolate({
+                              inputRange: [0, 0.5, 1],
+                              outputRange: ['0deg', '45deg', '90deg'],
+                            })
+                          : current.progress.interpolate({
+                              inputRange: [0, 0.5, 1],
+                              outputRange: ['90deg', '45deg', '0deg'],
+                            }),
+                      },
+                    ],
+                    opacity: next
+                      ? next.progress.interpolate({
+                          inputRange: [0, 0.5, 1],
+                          outputRange: [1, 1, 0],
+                        })
+                      : current.progress.interpolate({
+                          inputRange: [0, 0.5, 1],
+                          outputRange: [0, 0, 1],
+                        }),
+                  },
+                  overlayStyle: {
+                    opacity: current.progress.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [0, 1],
+                    }),
+                  },
+                };
+              },
+            }}
+          />
+          <Stack.Screen
+            name="SeatMapDiagram"
+            component={SeatMapDiagram}
+            options={{
+              headerShown: false,
+              transitionSpec: {
+                open: {
+                  animation: 'timing',
+                  config: {
+                    duration: 500,
+                  },
+                },
+                close: {
+                  animation: 'timing',
+                  config: {
+                    duration: 500,
+                  },
+                },
+              },
+              cardStyleInterpolator: ({current, next}) => {
+                return {
+                  cardStyle: {
+                    transform: [
+                      {
+                        rotateX: next
+                          ? next.progress.interpolate({
+                              inputRange: [0, 0.5, 1],
+                              outputRange: ['0deg', '45deg', '90deg'],
+                            })
+                          : current.progress.interpolate({
+                              inputRange: [0, 0.5, 1],
+                              outputRange: ['90deg', '45deg', '0deg'],
                             }),
                       },
                     ],
